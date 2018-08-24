@@ -27,6 +27,7 @@ set(
   "1.ros_package_path"
   "1.ros_version"
   "1.ros_python_version"
+  "1.ros_misc"
 )
 if(CMAKE_HOST_UNIX)
   set(shell "sh")

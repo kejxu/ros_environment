@@ -1,0 +1,4 @@
+REM generated from ros_environment/env-hooks/1.ros_misc.bat.in
+
+set QT_PLUGIN_PATH=c:\opt\rosdeps\x64\plugins
+set ROSDISTRO_INDEX_URL=https://raw.githubusercontent.com/ms-iot/rosdistro-db/init_windows/index.yaml
