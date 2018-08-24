@@ -1,4 +1,32 @@
-REM generated from ros_environment/env-hooks/1.ros_misc.bat.in
+REM generated from ros_environment/env-hooks/1.ros_version.bat.in
+setlocal
 
-set QT_PLUGIN_PATH=c:\opt\rosdeps\x64\plugins
-set ROSDISTRO_INDEX_URL=https://raw.githubusercontent.com/ms-iot/rosdistro-db/init_windows/index.yaml
+set qt5dir=
+for /f "tokens=* USEBACKQ" %%f in (`where qt5core.dll`) do (
+    set qt5dir=%%f
+)
+
+if not defined qt5dir (
+    goto :eof
+)
+
+set basedir=
+CALL :getbasedir %qt5dir%
+
+set abspath=
+CALL :getabspath %basedir%..\plugins
+
+if not exist %abspath% (
+    goto :eof
+)
+
+endlocal && set QT_PLUGIN_PATH=%abspath%
+goto :eof
+
+:getbasedir
+set basedir=%~dp1
+goto :eof
+
+:getabspath
+set abspath=%~f1
+goto :eof
