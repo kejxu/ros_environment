@@ -2,7 +2,7 @@ REM generated from ros_environment/env-hooks/1.ros_version.bat.in
 setlocal
 
 set qt5dir=
-for /f "tokens=* USEBACKQ" %%f in (`where qt5core.dll`) do (
+for /f "tokens=* USEBACKQ" %%f in (`where qt5core.dll 2^>NUL`) do (
     set qt5dir=%%f
 )
 
