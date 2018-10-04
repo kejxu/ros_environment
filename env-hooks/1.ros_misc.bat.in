@@ -1,4 +1,4 @@
-REM generated from ros_environment/env-hooks/1.ros_version.bat.in
+REM generated from ros_environment/env-hooks/1.ros_misc.bat.in
 setlocal
 
 set qt5dir=
